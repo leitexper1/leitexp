@@ -158,3 +158,88 @@
         min-width: 100px;
     }
 }
+
+/* Responsive design pour les boutons */
+@media (max-width: 640px) {
+    .container {
+        padding: 10px;
+    }
+    
+    /* Adaptation de la section gestion des fichiers */
+    .bg-white.rounded-lg.shadow-md.p-5.mb-6 {
+        padding: 15px !important;
+    }
+    
+    /* Alignement vertical des boutons sur mobile */
+    .flex.items-center.gap-4 {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px !important;
+    }
+    
+    /* Style du sélecteur CSV sur mobile */
+    #csv-selector {
+        min-width: 100% !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Boutons responsives */
+    #load-csv, #create-csv {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    /* Groupe de boutons */
+    .flex.flex-wrap.gap-2 {
+        justify-content: center;
+    }
+    
+    .flex.flex-wrap.gap-2 > button {
+        flex: 1 0 45%;
+        min-width: 120px;
+        margin-bottom: 8px;
+    }
+    
+    /* Formulaire nouveau CSV */
+    #new-csv-form .flex.items-center.gap-2 {
+        flex-direction: column;
+    }
+    
+    #new-csv-name {
+        margin-bottom: 10px;
+    }
+}
+
+/* Pour les écrans d'ordinateur - Correction de la largeur */
+@media (min-width: 641px) {
+    .flex.items-center.gap-4 {
+        flex-wrap: nowrap;
+    }
+    
+    #csv-selector {
+        min-width: 250px !important;
+        max-width: 350px; /* Limite la largeur maximale */
+    }
+    
+    #load-csv, #create-csv {
+        white-space: nowrap; /* Empêche le texte de se casser */
+        flex-shrink: 0; /* Empêche le rétrécissement */
+    }
+}
+
+/* Pour les écrans moyens - Optimisation */
+@media (max-width: 768px) and (min-width: 641px) {
+    .flex.items-center.gap-4 {
+        flex-wrap: wrap;
+    }
+    
+    #csv-selector {
+        min-width: 200px !important;
+        flex-grow: 1;
+    }
+    
+    #load-csv, #create-csv {
+        flex: 1;
+        min-width: 100px;
+    }
+}
